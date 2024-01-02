@@ -1,0 +1,19 @@
+{
+  "name": "udemynode",
+  "version": "1.0.0",
+  "description": "https://www.udemy.com/course/node-with-react-fullstack-web-development/learn/lecture/7593680#questions",
+  "main": "index.js",
+  "engines": {
+    "node": "21.5.0",
+    "npm": "10.2.4"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "latest-version": "^7.0.0"
+  }
+}
