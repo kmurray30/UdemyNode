@@ -1,11 +1,16 @@
-const express = require('express');
+require("https").globalAgent.options.rejectUnauthorized = false; // todo kymurray remove
+const express = require("express");
+require("./services/passport.js");
+require("./routes/authRoutes.js");
+
 const app = express();
 
-var counter = 0;
+require("./routes/authRoutes")(app);
 
-app.get('/', (req, res) => {
-    counter++;
-    res.send({ yo: "this page has not been visited " + counter + " times" });
+var counter = 0;
+app.get("/", (req, res) => {
+  counter++;
+  res.send({ yo: "this page has not been visited " + counter + " times" });
 });
 
 const PORT = process.env.PORT || 5000;
