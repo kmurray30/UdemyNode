@@ -1,4 +1,5 @@
 const passport = require("passport");
+const util = require("util");
 
 module.exports = (app) => {
   var counter = 0;
@@ -20,6 +21,14 @@ module.exports = (app) => {
   });
 
   app.get("/api/current_user", (req, res) => {
-    res.send(req.user);
+    // console.log(req);
+    // console.log(
+    //   util.inspect(req, {
+    //     depth: 5,
+    //     colors: true,
+    //   })
+    // );
+    res.send(req.session);
+    // res.send(req.user);
   });
 };

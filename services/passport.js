@@ -27,9 +27,9 @@ passport.use(
     },
     (accessToken, refreshToken, profile, done) => {
       // Log
-      console.log("access token: ", accessToken);
-      console.log("refresh token: ", refreshToken);
-      console.log("profile: ", profile);
+      // console.log("access token: ", accessToken);
+      // console.log("refresh token: ", refreshToken);
+      // console.log("profile: ", profile);
 
       // Check user exists
       User.findOne({ googleId: profile.id }).then((existingUser) => {
