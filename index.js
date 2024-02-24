@@ -1,4 +1,4 @@
-require("https").globalAgent.options.rejectUnauthorized = false; // todo kymurray remove
+// require("https").globalAgent.options.rejectUnauthorized = false; // todo kymurray remove
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
@@ -23,6 +23,6 @@ app.use(passport.session());
 
 require("./routes/authRoutes")(app);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 console.log("port is " + PORT);
 app.listen(PORT);
